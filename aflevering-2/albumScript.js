@@ -50,6 +50,6 @@ function Album(artistName, albumName, productionYear, rating) {
   
     /*Til sidst kører vi et forEach-loop, hvor vi for hvert album-objekt får tilføjet en div med album-data til vores HTML-side under det HTML-element der har ID'et "content". Her kalder vi parametren for album, og dette gør at vi får adgang til at trække oplysningerne ud fra alle elementerne i arrayet*/
     albumObjects.forEach(function (album) {
-      addDivWithAlbum(album, "content");
+      addDivWithAlbum(album, "album-listing");
     });
   });
