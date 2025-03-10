@@ -16,6 +16,7 @@ function Album(artistName, albumName, productionYear, rating) {
     "<td>" + album.year + "</td>" +
     "<td>" + album.rating + "</td>" +
     "</tr>";
+    /*Dette bliver tilføjet som en string til parent-elementet i mit HTML-dokument ved at lægge det til det eksisterende element*/
     parentElement.innerHTML = parentElement.innerHTML + elementToAdd;
   }
   /*Jeg henter albums-data fra json-filen "albums.json", hvorefter "then" venter til dataen er hentet og derefter logger jeg det data vi har trukket ud af filen, så jeg kan se selve indholdet af objektet og være sikker på at jeg har hentet det rigtige data fra filen*/
