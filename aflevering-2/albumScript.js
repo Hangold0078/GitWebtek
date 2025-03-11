@@ -6,7 +6,7 @@ function Album(artistName, albumName, productionYear, rating) {
     this.rating = rating;
   }
   
-  /*Her finder jeg HTML-elementet med parentid, og indsætter vores album-data i en tabel-row, med de 4 tabel-data her*/
+  /*Her finder jeg HTML-elementet med parentId, og indsætter vores album-data i en tabel-row, med de 4 tabel-data her*/
   function addRowWithAlbum(album, parentid) {
     let parentElement = document.getElementById(parentid);
     let elementToAdd =
@@ -30,7 +30,7 @@ function Album(artistName, albumName, productionYear, rating) {
     console.log("AlbumObjects will be placed here: ");
     console.log(albumObjects);
 
-  /*Her laves der et for-loop, som looper igennem alle albums fra json-arrayet. Vi starter her med albummet på indeks 0, altså det første og stopper loopet ved albums.length, altså når vi har kørt alle de antal albums igennem som der er. i++ betyder at vi for hver gang øger i med 1, altså at vi går videre til det næste album i rækken. Efter dette oprettes der et nyt albums-object med const, hvor vi definere hvilke egenskaber vi gerne vil have med i objektet f.eks. artistName. Til sidst pusher vi det nye albums-objekt ind i vores array, som blev kaldt albumObjects. Og dette vil kører indtil vi har indsat alle albums i arrayet.*/
+  /*Her laves der et for-loop, som looper igennem alle albums fra json-arrayet. Vi starter her med albummet på indeks 0, altså det første og stopper loopet ved albums.length, altså når vi har kørt alle de antal albums igennem som der er. i++ betyder at vi for hver gang øger i med 1, altså at vi går videre til det næste album i rækken. Efter dette oprettes der et nyt albums-object med constructor-funktionen, hvor vi definere hvilke egenskaber vi gerne vil have med i objektet f.eks. artistName. Til sidst pusher vi det nye albums-objekt ind i vores array, som blev kaldt albumObjects. Og dette vil kører indtil vi har indsat alle albums i arrayet.*/
 
     for (let i = 0; i < albums.length; i++) {
       const album = new Album(
@@ -50,7 +50,7 @@ function Album(artistName, albumName, productionYear, rating) {
       addRowWithAlbum(album, "album-listing");
     });
   });
-/*her henter vi data fra den givne url*/
+/*Jeg definerer min funktion fetchContent, så den kan bruges længere oppe i scriptet*/
   async function fetchContent(url) {
     /*her får vi funktionen til at vente med næste step indtil fetch(url) er aflsuttet.*/
     let request = await fetch(url);
